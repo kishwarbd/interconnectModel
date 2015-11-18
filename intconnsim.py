@@ -267,6 +267,7 @@ def mpiProcessRecv(this, *args):
         status = None       # TODO
         MPIRecvCommData = MPIRecvData(data, count, data_type, dest, tag, comm, status, buffer_size, app_process_name, dest_app_name, flow_id) #TODO: may be no necessity of creating using LoadPacket after all...
         ###if(node_id_this_process == source_node_id):
+        print "This is a receive process to be pushed to the Github"
         entity.reqService(50.2, "MPI_Recv", MPIRecvCommData, "Node", dest_node_id) #TODO: check whether this should really be a request service or not. A good value: 50.1
         ###if(node_id_this_process == dest_node_id):
         this.hibernate() # TODO: need to check the placement of the hibernation.
